@@ -1,5 +1,0 @@
-{
-  "framework": "nextjs",
-  "buildCommand": "cd client && next build",
-  "outputDirectory": "client/.next"
-}
