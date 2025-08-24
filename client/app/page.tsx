@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 export default function Home() {
   const [affiliateId, setAffiliateId] = useState(1);
-  const [clicks, setClicks] = useState([]);
-  const [conversions, setConversions] = useState([]);
+  const [clicks, setClicks] = useState<any[]>([]);
+  const [conversions, setConversions] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchClicks = async () => {
