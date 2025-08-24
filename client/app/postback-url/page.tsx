@@ -1,10 +1,10 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import Link from 'next/link';
 
-export default function PostbackURL() {
+function PostbackURLContent() {
   const searchParams = useSearchParams();
   const affiliateId = searchParams.get('affiliate_id');
 
@@ -44,5 +44,13 @@ export default function PostbackURL() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function PostbackURL() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PostbackURLContent />
+    </Suspense>
   );
 }
